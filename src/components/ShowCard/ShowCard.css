@@ -1,0 +1,42 @@
+.show-card{
+  display: flex;
+  flex-direction: column;
+  background-color:aliceblue;
+  margin: 14px 16px;
+  width: 20%;
+  min-width: 250px;
+  justify-content: center;
+ align-items: center;
+}
+.btn{
+  text-align: center;
+  width: 60%;
+  padding: 4px 5px;
+  margin: 4px 0px 14px 0px;
+  border: none;
+  background-color: rgb(137, 243, 183);
+  font: 16px;
+}
+.btn:hover{
+  cursor: pointer;
+  background-color: aquamarine;
+
+}
+.show-language{
+  margin: 2px 0px;
+}
+.show-rating{
+  margin: 2px 0px;
+}
+h2{
+  margin: 10px 0px;
+}
+@media screen and (max-width: 570px) {
+ .show-card{
+  width: 80%;
+
+ }}
+ @media (min-width:570px)and (max-width: 850px) {
+  .show-card{
+   width: 40%;
+  }}

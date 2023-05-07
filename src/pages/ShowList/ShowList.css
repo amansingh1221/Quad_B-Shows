@@ -1,0 +1,19 @@
+body{
+  background-color: rgb(200, 242, 242);
+  width: auto;
+  height: auto;
+  text-align: center; 
+}
+h1{
+  background-color: aqua;
+  text-align: center;
+  /* width: 100%; */
+}
+.show-list{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  /* text-align: center; */
+  flex-wrap:wrap;
+
+}
