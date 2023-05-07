@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+// import ReactHtmlParser from 'react-html-parser'; 
 
 const Show = () => {
   const { id } = useParams();
@@ -23,15 +24,18 @@ const Show = () => {
     fetchData();
   }, []);
 
+  // const el=
+
 
   // console.log(data);
 
   return (
-    <div className='show-page'>{data.length > 0 &&
+    <div className='show-page'>
+    {data.length > 0 &&
       <h1 className='show-name'>{data[0].show.name}</h1>
     }
   
-      <div className='show-summary'>{data.length > 0 &&data[0].show.summary}
+      <div className='show-summary'>{data.length > 0 &&<div dangerouslySetInnerHTML={{ __html: data[0].show.summary }}></div>}
       </div>
     </div>
   )
