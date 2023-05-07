@@ -1,12 +1,14 @@
 import React from 'react'
 import './ShowCard.css'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 const ShowCard = ({item}) => {
-  console.log(item);
+  // console.log(item);
+const navigate=useNavigate();
+const id_=item.show.id;
 
-  const handleClick=()=>{
-    
-  }
+const handleclick=()=>{
+    navigate(`/form/${id_}`)
+}
   // const pat=item.show.image.medium
   return (
     <div className='show-card'>
@@ -15,7 +17,7 @@ const ShowCard = ({item}) => {
         <div className='show-rating'>Rating: {
           (item.show.rating.average==null)?0:item.show.rating.average
           }</div>
-          <button className='btn'key={item.show.id} onClick={handleClick} type='button'>Book Tickets</button>
+          <button className='btn' onClick={handleclick} type='button'>Book Tickets</button>
           
     </div>
   )

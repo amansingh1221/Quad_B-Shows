@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-
-const Show = () => {
-  const { id } = useParams();
+import {useParams} from 'react-router-dom'
+import './Form.css'
+const Form = () => {
+  const {id}=useParams();
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,25 +16,33 @@ const Show = () => {
         })
         setData(item);
 
+
       } catch (error) {
         console.log('Error fetching data:', error);
       }
     };
     fetchData();
   }, []);
+  
 
 
-  // console.log(data);
 
   return (
-    <div className='show-page'>{data.length > 0 &&
-      <h1 className='show-name'>{data[0].show.name}</h1>
-    }
+   
+<>
+<h1>Book Tickets Now!!!</h1>
+<form >
+<h2>{data.length > 0 &&data[0].show.name}</h2>
+<label htmlFor='date'>Date: <input type='date' id='date'></input></label>
+
+<label htmlFor='num'>Number of Tckets: <input type='number' id='num'></input></label>
+
+<button type='submit'>Confirm Booking</button>
+
   
-      <div className='show-summary'>{data.length > 0 &&data[0].show.summary}
-      </div>
-    </div>
+</form>
+</>
   )
 }
 
-export default Show
+export default Form

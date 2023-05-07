@@ -1,0 +1,19 @@
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  background-color: aliceblue;
+  width: 40%;
+  margin: 40px auto;
+  border-radius: 12px;
+}
+label{
+  padding: 4px 8px;
+  margin: 12px 4px;
+}
+button{
+  margin: 12px 0px;
+}
